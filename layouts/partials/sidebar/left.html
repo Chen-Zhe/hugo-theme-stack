@@ -57,7 +57,7 @@
         {{ $currentPage := . }}
         {{ range .Site.Menus.main }}
 
-        <li {{ if eq $currentPage.URL .URL }} class='current' {{ end }}>
+        <li {{ if eq $currentPage.RelPermalink .URL }} class='current' {{ end }}>
             <a href='{{ .URL | absURL }}' {{ if eq .Params.newTab true }}target="_blank"{{ end }}>
                 {{ $icon := default .Pre .Params.Icon }}
                 {{ if .Pre }}
